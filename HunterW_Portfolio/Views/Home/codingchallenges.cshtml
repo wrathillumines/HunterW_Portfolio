@@ -130,9 +130,12 @@
                                                     <br />
                                                 </div>
                                                 <div class="row">
-                                                    <div class="column-sm-12 text-center">
+                                                    <div class="col-xs-12 text-center">
                                                         <h2>SIMPLE MATH</h2>
                                                     </div>
+                                                </div>
+                                                <div class="col=xs-12 text-center">
+                                                    Enter five numbers and click "Calculate" to perform a few simple calculations.
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-xs-5 h4 text-center">
@@ -235,11 +238,13 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="column-sm-12 text-center">
-                                                        <h2>FIND THE FACTORIAL</h2>
+                                                        <h2>DETERMINE THE FACTORIAL</h2>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-sm-12 h4 text-center">
-                                                            Enter a Number Lower Than 171
+                                                        <div class="col-sm-12 text-center">
+                                                            Enter a number and click "Calculate" to determine a number's factorial. Keep in mind that<br />
+                                                            numbers below one cannot be calculated and numbers higher than 170 are effectively infinite.
+                                                            <hr />
                                                         </div>
                                                     </div>
                                                     <div class="row">
@@ -321,75 +326,80 @@
                                                     <div class="column-sm-12 text-center">
                                                         <h2>FIZZ-BUZZ</h2>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12 h4 text-center">
-                                                            Enter 2 integers between 1 and 100.
-                                                        </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12 text-center">
+                                                        Enter two whole numbers into the boxes below and click "Find FizzBuzz."<br />
+                                                        The program will search all integers from 1 to 100, highlighting any<br />
+                                                        that are multiples of the user's numbers. Multiples of the first number<br />
+                                                        return the word "Fizz" and multiples of the second return the word "Buzz."<br />
+                                                        Multiples of both numbers will return "FizzBuzz."
+                                                        <hr />
                                                     </div>
-                                                    <br />
-                                                    <div class="row">
-                                                        <div class="col-md-2 col-md-offset-5">
-                                                            <input type="number" id="fbnum1" class="form-control fbinput text-center" />
-                                                        </div>
+                                                </div>
+                                                <br />
+                                                <div class="row">
+                                                    <div class="col-md-2 col-md-offset-5">
+                                                        <input type="number" id="fbnum1" class="form-control fbinput text-center" />
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-md-2 col-md-offset-5">
-                                                            <input type="number" id="fbnum2" class="form-control fbinput text-center" />
-                                                        </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-2 col-md-offset-5">
+                                                        <input type="number" id="fbnum2" class="form-control fbinput text-center" />
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-md-6 col-md-offset-3 h4 text-center">
-                                                            <span id="fbout" class="fbout">Waiting for two numbers...</span>
-                                                        </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-md-offset-3 h4 text-center">
+                                                        <span id="fbout" class="fbout">Waiting for two numbers...</span>
                                                     </div>
-                                                    <div class="info-buttons text-center">
-                                                        <button id="runfizzbuzz" type="button" class="btn btn-primary-filled"><span>Find FizzBuzz</span></button>
-                                                        <button id="clearfizzbuzz" type="button" class="btn btn-primary-filled"><span>Clear</span></button>
-                                                        <button id="fbcodebtn" type="button" class="btn btn-primary-filled"><span>Show Code</span></button>
-                                                        <button type="button" class="btn btn-danger-filled" data-dismiss="modal"><span>Close</span></button>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-xs-12">
-                                                            <div id="fbcode">
-                                                                <pre class="brush: js;">
-                                                                    //
-                                                                    //FizzBuzz
+                                                </div>
+                                                <div class="info-buttons text-center">
+                                                    <button id="runfizzbuzz" type="button" class="btn btn-primary-filled"><span>Find FizzBuzz</span></button>
+                                                    <button id="clearfizzbuzz" type="button" class="btn btn-primary-filled"><span>Clear</span></button>
+                                                    <button id="fbcodebtn" type="button" class="btn btn-primary-filled"><span>Show Code</span></button>
+                                                    <button type="button" class="btn btn-danger-filled" data-dismiss="modal"><span>Close</span></button>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div id="fbcode">
+                                                            <pre class="brush: js;">
+                                                                //
+                                                                //FizzBuzz
 
-                                                                    $("#runfizzbuzz").click(function () {
+                                                                $("#runfizzbuzz").click(function () {
 
-                                                                        //Gather data and create variables for function
-                                                                        var input1 = +($("#fbnum1").val());
-                                                                        var input2 = +($("#fbnum2").val());
-                                                                        var output = "";
+                                                                    //Gather data and create variables for function
+                                                                    var input1 = +($("#fbnum1").val());
+                                                                    var input2 = +($("#fbnum2").val());
+                                                                    var output = "";
 
-                                                                        //Loop 100 times, increasing index by 1 each time
-                                                                        //Send array and input numbers to function FizzBuzz
-                                                                        for (var i = 1; i <= 100; i++) {
-                                                                            output += FizzBuzz(input1, input2, i);
-                                                                        };
-
-                                                                        output = output.substr(0, output.length - 2);
-                                                                        $("#fbout").html(output + "");
-                                                                    });
-
-                                                                        //Look for multiples of input numbers and inform user
-                                                                    function FizzBuzz(x, y, z) {
-                                                                        if (z % x == 0 && z % y == 0) {
-                                                                            return "<span class='fizzbuzz'>FizzBuzz</span>, ";
-                                                                        }
-                                                                        else if (z % x == 0) {
-                                                                            return "<span class='fizz'>Fizz</span>, ";
-                                                                        }
-                                                                        else if (z % y == 0) {
-                                                                            return "<span class='buzz'>Buzz</span>, ";
-                                                                        }
-                                                                        else {
-                                                                            return z + ", ";
-                                                                        };
+                                                                    //Loop 100 times, increasing index by 1 each time
+                                                                    //Send array and input numbers to function FizzBuzz
+                                                                    for (var i = 1; i <= 100; i++) {
+                                                                        output += FizzBuzz(input1, input2, i);
                                                                     };
-                                                                    //
-                                                                </pre>
-                                                            </div>
+
+                                                                    output = output.substr(0, output.length - 2);
+                                                                    $("#fbout").html(output + "");
+                                                                });
+
+                                                                    //Look for multiples of input numbers and inform user
+                                                                function FizzBuzz(fizzy, buzzy, numcompare) {
+                                                                    if (numcompare % fizzy == 0 && numcompare % buzzy == 0) {
+                                                                        return "<span class='fizzbuzz'>FizzBuzz</span>, ";
+                                                                    }
+                                                                    else if (numcompare % fizzy == 0) {
+                                                                        return "<span class='fizz'>Fizz</span>, ";
+                                                                    }
+                                                                    else if (numcompare % buzzy == 0) {
+                                                                        return "<span class='buzz'>Buzz</span>, ";
+                                                                    }
+                                                                    else {
+                                                                        return numcompare + ", ";
+                                                                    };
+                                                                };
+                                                                //
+                                                            </pre>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -411,8 +421,9 @@
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-sm-12 h4 text-center">
-                                                        Enter a word or phrase to begin.
+                                                    <div class="col-sm-12 text-center">
+                                                        Enter a word or phrase and click "Analyze" to determine if a word is a palindrome.
+                                                        <hr />
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -479,8 +490,9 @@
                                                         <h2>SUM OF ALL FEARS</h2>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-12 h4 text-center">
-                                                            Enter one number into each of the spaces below to run and then one more number in the last space to represent K.<br />
+                                                        <div class="col-md-12 text-center">
+                                                            Enter one number into each of the six spaces below to run and then one more number in<br />
+                                                            the last space to represent K, then click "Calculate."<br />
                                                             <br />
                                                             If any two of the first six numbers can be added together to match K, the operation is a success.<hr />
                                                         </div>
@@ -548,7 +560,7 @@
                                                                         //Loop through array starting at index 0, increasing by one until
                                                                         //index number is no longer less than 5 (6 numbers that were input minus 1)
                                                                         for (index = 0; index < feararray.length - 1; index++) {
-                                                                            var match = feararray.indexOf(kay - feararray[index], index + 1)
+                                                                            var match = feararray.indexOf(kay - feararray[index], index + 1);
 
                                                                             //Inform user if K has been matched or not
                                                                             if (match > 0) {

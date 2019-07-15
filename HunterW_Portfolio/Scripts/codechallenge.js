@@ -118,18 +118,18 @@ $("#runfizzbuzz").click(function () {
 });
 
     //Look for multiples of input numbers and inform user
-function FizzBuzz(x, y, z) {
-    if (z % x == 0 && z % y == 0) {
+function FizzBuzz(fizzy, buzzy, numcompare) {
+    if (numcompare % fizzy == 0 && numcompare % buzzy == 0) {
         return "<span class='fizzbuzz'>FizzBuzz</span>, ";
     }
-    else if (z % x == 0) {
+    else if (numcompare % fizzy == 0) {
         return "<span class='fizz'>Fizz</span>, ";
     }
-    else if (z % y == 0) {
+    else if (numcompare % buzzy == 0) {
         return "<span class='buzz'>Buzz</span>, ";
     }
     else {
-        return z + ", ";
+        return numcompare + ", ";
     };
 };
 
@@ -207,7 +207,7 @@ $("#runsumoffears").click(function () {
     //Loop through array starting at index 0, increasing by one until
     //index number is no longer less than 5 (6 numbers that were input minus 1)
     for (index = 0; index < feararray.length - 1; index++) {
-        var match = feararray.indexOf(kay - feararray[index], index + 1)
+        var match = feararray.indexOf(kay - feararray[index], index + 1);
 
         //Inform user if K has been matched or not
         if (match > 0) {
