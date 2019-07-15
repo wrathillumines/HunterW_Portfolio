@@ -1,0 +1,625 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Minimal Portfolio Theme">
+    <meta name="keywords" content="responsive, retina ready, html5, css3, creative, portfolio, bootstrap theme" />
+    <meta name="author" content="KingStudio.ro">
+
+    <!-- favicon -->
+    <link rel="icon" href="~/Images/newfavicon.png">
+    <!-- page title -->
+    <title>Hunter Williams</title>
+    <!-- bootstrap css -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <!-- css -->
+    <link href="~/Content/style.css" rel="stylesheet">
+    <link href="~/Content/animate.css" rel="stylesheet">
+    <link href="~/Content/fizzbuzz.css" rel="stylesheet">
+    <link href="~/Scripts/SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css">
+    <link href="~/Scripts/SyntaxHighlighter/styles/shThemeEclipse.css" rel="stylesheet" type="text/css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,800,900" rel="stylesheet">
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='~/fonts/FontAwesome.otf' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="~/Content/linear-icons.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="spinner spinner-round"></div>
+    </div>
+    <!-- / preloader -->
+    <!-- header -->
+    <header>
+        <!-- nav -->
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img src="~/Images/newlogo.png" alt="logo"></a>
+                </div><!-- / navbar-header -->
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="@Url.Action("Index", "Home")"><span>HOME</span></a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("About", "Home")"><span>ABOUT</span></a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Portfolio", "Home")"><span>PORTFOLIO</span></a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Codingchallenges", "Home")"><span>CODING CHALLENGES</span></a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Contact", "Home")"><span>CONTACT</span></a>
+                        </li>
+                    </ul>
+                </div><!--/ nav-collapse -->
+            </div><!-- / container -->
+        </nav>
+        <!-- / nav -->
+        <!-- header-banner -->
+        <div id="header-banner">
+            <div class="banner-content single-page text-center">
+                <div class="banner-info">
+                    <h1>CODING<br />CHALLENGES</h1>
+                    <p>An Exercise in JavaScript</p>
+                </div><!-- / banner-info -->
+            </div><!-- / banner-content -->
+        </div>
+        <!-- / header-banner -->
+    </header>
+    <!-- / header -->
+    <!-- content -->
+
+    <div id="page-content" class="container">
+        <!-- project content + sidebar -->
+        <section id="project">
+            <div class="row">
+                <!-- button area -->
+                <div class="col-sm-10 col-sm-offset-1 text-center">
+                    <div class="section-description light">
+                        <h4>WHAT ARE THE CODING CHALLENGES?</h4>
+                        <p>
+                            In the coding challenges, there are five JavaScript exercises. The first challenge is simply some basic math. The second challenge will tell you the factorial of a number.
+                            Challenge number three is called "Fizz-Buzz" and will run a loop to find multiples of two user-provided
+                            numbers. In the fourth challenge, simply enter a word to find out if it is a palindrome or not. The last challenge - "The Sum of All Fears" - takes in an array of six
+                            numbers and adds them together two at a time to attempt to match a seventh number.
+                            <br />
+                            <br />
+                            I have provided the code for each challenge as well.
+                        </p>
+                        <h4 class="space-top-30">LET'S SEE IT</h4>
+                        <i class="lnr lnr-arrow-down">
+                        </i>
+                        <div class="project-info">
+                            <div class="info">
+                                <!--Simple Math-->
+                                <div id="fivenumlaunch" class="modal fade" role="dialog">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <br />
+                                                </div>
+                                                <div class="row">
+                                                    <div class="column-sm-12 text-center">
+                                                        <h2>SIMPLE MATH</h2>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-5 h4 text-center">
+                                                        Enter Five Numbers
+                                                    </div>
+                                                    <div class="col-xs-7 h4 text-center">
+                                                        The Resutls
+                                                    </div>
+                                                </div>
+                                                <hr />
+                                                <div class="row">
+                                                    <div class="col-xs-5">
+                                                        <input type="number" id="mathnum1" class="form-control" />
+                                                    </div>
+                                                    <div class="col-xs-7 h4 text-center">
+                                                        <span id="smallest">Enter 5 numbers to begin.</span>
+                                                    </div>
+                                                </div>
+                                                <br />
+                                                <div class="row">
+                                                    <div class="col-xs-5">
+                                                        <input type="number" id="mathnum2" class="form-control" />
+                                                    </div>
+                                                    <div class="col-xs-7 h4 text-center">
+                                                        <span id="largest"></span>
+                                                    </div>
+                                                </div>
+                                                <br />
+                                                <div class="row">
+                                                    <div class="col-xs-5">
+                                                        <input type="number" id="mathnum3" class="form-control" />
+                                                    </div>
+                                                    <div class="col-xs-7 h4 text-center">
+                                                        <span id="mean"></span>
+                                                    </div>
+                                                </div>
+                                                <br />
+                                                <div class="row">
+                                                    <div class="col-xs-5">
+                                                        <input type="number" id="mathnum4" class="form-control" />
+                                                    </div>
+                                                    <div class="col-xs-7 h4 text-center">
+                                                        <span id="sum"></span>
+                                                    </div>
+                                                </div>
+                                                <br />
+                                                <div class="row">
+                                                    <div class="col-xs-5">
+                                                        <input type="number" id="mathnum5" class="form-control" />
+                                                    </div>
+                                                    <div class="col-xs-7 h4 text-center">
+                                                        <span id="product"></span>
+                                                    </div>
+                                                </div>
+                                                <br />
+                                                <div class="info-buttons text-center">
+                                                    <button id="runmath" type="button" class="btn btn-primary-filled"><span>Calculate</span></button>
+                                                    <button id="clearmath" type="button" class="btn btn-primary-filled"><span>Clear</span></button>
+                                                    <button id="mathcodebtn" type="button" class="btn btn-primary-filled"><span>Show Code</span></button>
+                                                    <button type="button" class="btn btn-danger-filled" data-dismiss="modal"><span>Close</span></button>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div id="mathcode">
+                                                            <pre class="brush: js;">
+                                                                //
+                                                                //Simple math
+                                                                $("#runmath").click(function () {
+
+                                                                    //Gather data and create variables for function
+                                                                    var num1 = +$("#mathnum1").val();
+                                                                    var num2 = +$("#mathnum2").val();
+                                                                    var num3 = +$("#mathnum3").val();
+                                                                    var num4 = +$("#mathnum4").val();
+                                                                    var num5 = +$("#mathnum5").val();
+
+                                                                    //Analyze numbers and inform user of answers
+                                                                    $("#smallest").text("The smallest number is: " + Math.min(num1, num2, num3, num4, num5));
+                                                                    $("#largest").text("The largest number is: " + Math.max(num1, num2, num3, num4, num5));
+                                                                    $("#mean").text("The average of all numbers is: " + (num1 + num2 + num3 + num4 + num5) / 5);
+                                                                    $("#sum").text("The sum of all numbers is: " + (num1 + num2 + num3 + num4 + num5));
+                                                                    $("#product").text("The product of all numbers is: " + num1 * num2 * num3 * num4 * num5);
+                                                                });
+                                                                //
+                                                            </pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Factorial-->
+                                <div id="factoriallaunch" class="modal fade" role="dialog">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <br />
+                                                </div>
+                                                <div class="row">
+                                                    <div class="column-sm-12 text-center">
+                                                        <h2>FIND THE FACTORIAL</h2>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 h4 text-center">
+                                                            Enter a Number Lower Than 171
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-4 col-sm-offset-4">
+                                                            <input type="number" id="factin" class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 h4 text-center">
+                                                            <span id="factout">Waiting for number to be entered...</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info-buttons text-center">
+                                                        <button id="runfactorial" type="button" class="btn btn-primary-filled"><span>Calculate</span></button>
+                                                        <button id="clearfactorial" type="button" class="btn btn-primary-filled"><span>Clear</span></button>
+                                                        <button id="factcodebtn" type="button" class="btn btn-primary-filled"><span>Show Code</span></button>
+                                                        <button type="button" class="btn btn-danger-filled" data-dismiss="modal"><span>Close</span></button>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <div id="factcode">
+                                                                <pre class="brush: js;">
+                                                                    //
+                                                                    //Factorial
+
+                                                                    $("#runfactorial").click(function () {
+
+                                                                        //Gather data and create variables for function
+                                                                        var input = +$("#factin").val();
+                                                                        var output = factorial(input);
+                                                                        $("#factout").text("The factorial of " + input + " is " + output + ".");
+                                                                    });
+
+                                                                        //Check to make sure number is between 0 and 170
+                                                                    function factorial(fctrl) {
+                                                                        if (fctrl < 0) {
+                                                                            alert("Please use a number between 0 and 170.");
+                                                                            $("#factout").val("");
+                                                                            return;
+                                                                        }
+
+                                                                        else if (fctrl > 170) {
+                                                                            alert("Please use a number between 0 and 170.");
+                                                                            $("#factout").val("");
+                                                                            return;
+                                                                        }
+
+                                                                        //Loop starting at number one less than input number
+                                                                        //Decrement index number by one each loop
+                                                                        //Multiply by index number each loop
+                                                                        else if (fctrl > 0) {
+                                                                            for (var loop = fctrl - 1; loop > 1; loop--) {
+                                                                                fctrl *= loop
+                                                                            }
+                                                                        }
+
+                                                                        //Give user factorial of input number
+                                                                        return fctrl;
+                                                                    };
+                                                                    //
+                                                                </pre>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--FizzBuzz-->
+                                <div id="fizzbuzzlaunch" class="modal fade" role="dialog">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <br />
+                                                </div>
+                                                <div class="row">
+                                                    <div class="column-sm-12 text-center">
+                                                        <h2>FIZZ-BUZZ</h2>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12 h4 text-center">
+                                                            Enter 2 integers between 1 and 100.
+                                                        </div>
+                                                    </div>
+                                                    <br />
+                                                    <div class="row">
+                                                        <div class="col-md-2 col-md-offset-5">
+                                                            <input type="number" id="fbnum1" class="form-control fbinput text-center" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2 col-md-offset-5">
+                                                            <input type="number" id="fbnum2" class="form-control fbinput text-center" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-md-offset-3 h4 text-center">
+                                                            <span id="fbout" class="fbout">Waiting for two numbers...</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info-buttons text-center">
+                                                        <button id="runfizzbuzz" type="button" class="btn btn-primary-filled"><span>Find FizzBuzz</span></button>
+                                                        <button id="clearfizzbuzz" type="button" class="btn btn-primary-filled"><span>Clear</span></button>
+                                                        <button id="fbcodebtn" type="button" class="btn btn-primary-filled"><span>Show Code</span></button>
+                                                        <button type="button" class="btn btn-danger-filled" data-dismiss="modal"><span>Close</span></button>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <div id="fbcode">
+                                                                <pre class="brush: js;">
+                                                                    //
+                                                                    //FizzBuzz
+
+                                                                    $("#runfizzbuzz").click(function () {
+
+                                                                        //Gather data and create variables for function
+                                                                        var input1 = +($("#fbnum1").val());
+                                                                        var input2 = +($("#fbnum2").val());
+                                                                        var output = "";
+
+                                                                        //Loop 100 times, increasing index by 1 each time
+                                                                        //Send array and input numbers to function FizzBuzz
+                                                                        for (var i = 1; i <= 100; i++) {
+                                                                            output += FizzBuzz(input1, input2, i);
+                                                                        };
+
+                                                                        output = output.substr(0, output.length - 2);
+                                                                        $("#fbout").html(output + "");
+                                                                    });
+
+                                                                        //Look for multiples of input numbers and inform user
+                                                                    function FizzBuzz(x, y, z) {
+                                                                        if (z % x == 0 && z % y == 0) {
+                                                                            return "<span class='fizzbuzz'>FizzBuzz</span>, ";
+                                                                        }
+                                                                        else if (z % x == 0) {
+                                                                            return "<span class='fizz'>Fizz</span>, ";
+                                                                        }
+                                                                        else if (z % y == 0) {
+                                                                            return "<span class='buzz'>Buzz</span>, ";
+                                                                        }
+                                                                        else {
+                                                                            return z + ", ";
+                                                                        };
+                                                                    };
+                                                                    //
+                                                                </pre>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Palindrome-->
+                                <div id="palindromelaunch" class="modal fade" role="dialog">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <br />
+                                                </div>
+                                                <div class="row">
+                                                    <div class="column-sm-12 text-center">
+                                                        <h2>PALINDROME DETECTOR</h2>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 h4 text-center">
+                                                        Enter a word or phrase to begin.
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-6 col-sm-offset-3">
+                                                        <input type="text" id="palin" class="form-control" />
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div id="palout" class="col-sm-12 h4 text-center">
+                                                    </div>
+                                                </div>
+                                                <div class="info-buttons text-center">
+                                                    <button id="runpalindrome" type="button" class="btn btn-primary-filled"><span>Analyze</span></button>
+                                                    <button id="clearpalindrome" type="button" class="btn btn-primary-filled"><span>Clear</span></button>
+                                                    <button id="palcodebtn" type="button" class="btn btn-primary-filled"><span>Show Code</span></button>
+                                                    <button type="button" class="btn btn-danger-filled" data-dismiss="modal"><span>Close</span></button>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div id="palcode">
+                                                            <pre class="brush: js;">
+                                                                //
+                                                                //Palindrome
+
+                                                                $("#runpalindrome").click(function (input) {
+    
+                                                                    //Gather data and create variables for function
+                                                                    var original = $("#palin").val();
+                                                                    var input = $("#palin").val().toLowerCase().replace(/[\W_]/g, '');
+                                                                    var textLen = input.length;
+
+                                                                    //Loop through array starting at index 0 and
+                                                                    //increasing by 1 each time until the index number
+                                                                    //is equal to or greater than the input word
+                                                                    //length divided by 2.
+                                                                    for (var i = 0; i < textLen / 2; i++) {
+
+                                                                        //Inform user if input word is or is not a palindrome
+                                                                        if (input[i] !== input[textLen - 1 - i]) {
+                                                                            return $("#palout").text("\"" + original + "\" IS NOT spelled the same when reversed, so it IS NOT a palindrome.");
+                                                                        };
+                                                                    };
+                                                                    return $("#palout").text("\"" + original + "\" IS spelled the same when reversed, so it IS a palindrome.");
+                                                                });
+                                                                //
+                                                            </pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Sum Of All Fears-->
+                                <div id="sumoffearslaunch" class="modal fade" role="dialog">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <br />
+                                                </div>
+                                                <div class="row">
+                                                    <div class="column-sm-12 text-center">
+                                                        <h2>SUM OF ALL FEARS</h2>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12 h4 text-center">
+                                                            Enter one number into each of the spaces below to run and then one more number in the last space to represent K.<br />
+                                                            <br />
+                                                            If any two of the first six numbers can be added together to match K, the operation is a success.<hr />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <input type="number" id="fearnum1" class="form-control" />
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <input type="number" id="fearnum2" class="form-control" />
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <input type="number" id="fearnum3" class="form-control" />
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <input type="number" id="fearnum4" class="form-control" />
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <input type="number" id="fearnum5" class="form-control" />
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <input type="number" id="fearnum6" class="form-control" />
+                                                        </div>
+                                                        <hr />
+                                                    </div>
+                                                    <div class="row">
+                                                        <br />
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2 col-md-offset-4 h4">
+                                                            K =
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <input type="number" id="fearnumk" class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <br />
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12 h4 text-center">
+                                                            <span id="fearout">Waiting for numbers to be entered...</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info-buttons text-center">
+                                                        <button id="runsumoffears" type="button" class="btn btn-primary-filled"><span>Calculate</span></button>
+                                                        <button id="clearsumoffears" type="button" class="btn btn-primary-filled"><span>Clear</span></button>
+                                                        <button id="sumcodebtn" type="button" class="btn btn-primary-filled"><span>Show Code</span></button>
+                                                        <button type="button" class="btn btn-danger-filled" data-dismiss="modal"><span>Close</span></button>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <div id="sumcode">
+                                                                <pre class="brush: js;">
+                                                                    //
+                                                                    //Sum Of All Fears
+
+                                                                    $("#runsumoffears").click(function () {
+
+                                                                        //Gather data and create variables for loop
+                                                                        var feararray = [+$("#fearnum1").val(), +$("#fearnum2").val(), +$("#fearnum3").val(),
+                                                                        +$("#fearnum4").val(), +$("#fearnum5").val(), +$("#fearnum6").val()]
+                                                                        var kay = +$("#fearnumk").val()
+
+                                                                        //Loop through array starting at index 0, increasing by one until
+                                                                        //index number is no longer less than 5 (6 numbers that were input minus 1)
+                                                                        for (index = 0; index < feararray.length - 1; index++) {
+                                                                            var match = feararray.indexOf(kay - feararray[index], index + 1)
+
+                                                                            //Inform user if K has been matched or not
+                                                                            if (match > 0) {
+                                                                                $("#fearout").html("The <b>K</b> value you entered (<b>" + kay + "</b>) was found by adding the numbers" + "<span class='target'>"
+                                                                                    + feararray[index] + "</span> and<span class='target'>" + feararray[match] + "</span>");
+                                                                                return;
+                                                                            } else {
+                                                                                $("#fearout").text("K was not matched.");
+                                                                            };
+                                                                        };
+                                                                    });
+                                                                    //
+                                                                </pre>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Modal Launch Buttons-->
+                        <div class="info-buttons text-center">
+                            <a href="" class="btn btn-default-filled" data-toggle="modal" data-target="#fivenumlaunch"><i class="lnr lnr-diamond"></i><span> Basic Math</span></a>
+                            <a href="" class="btn btn-default-filled" data-toggle="modal" data-target="#factoriallaunch"><i class="lnr lnr-diamond"></i><span> Factorial</span></a>
+                            <a href="" class="btn btn-default-filled" data-toggle="modal" data-target="#fizzbuzzlaunch"><i class="lnr lnr-diamond"></i><span> Fizz-Buzz</span></a>
+                            <a href="" class="btn btn-default-filled" data-toggle="modal" data-target="#palindromelaunch"><i class="lnr lnr-diamond"></i><span> Palindrome</span></a>
+                            <a href="" class="btn btn-default-filled" data-toggle="modal" data-target="#sumoffearslaunch"><i class="lnr lnr-diamond"></i><span> Sum of All Fears</span></a>
+                        </div><!-- / modal-buttons -->
+
+                    </div><!-- section-description -->
+
+                </div><!-- / col-sm-4 col-md-3 -->
+                <!-- / project sidebar area -->
+            </div><!-- / row -->
+        </section>
+        <!-- / project content + sidebar -->
+    </div><!-- / container -->
+    <!-- / content -->
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-info">
+                © 2019 HUNTER WILLIAMS
+                <span class="social pull-right">
+                    <a href="https://www.facebook.com/wrathillumines" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/wrathillumines/" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                </span>
+            </p>
+        </div><!-- / container -->
+    </footer>
+    <!-- / footer -->
+    <!-- javascript -->
+    <!--<script src="~/Scripts/codechallenge.js"></script>-->
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.easing.min.js"></script>
+    <script src="~/Scripts/codechallenge.js"></script>
+    <script src="~/Scripts/SyntaxHighlighter/scripts/shCore.js"></script>
+    <script src="~/Scripts/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
+
+    <!--preloader-->
+    <script src="~/Scripts/preloader.js"></script>
+    <!-- / preloader -->
+    <script type="text/javascript">
+        SyntaxHighlighter.all()
+    </script>
+    <!-- / javascript -->
+</body>
+
+</html>

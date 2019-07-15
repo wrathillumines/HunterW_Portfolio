@@ -1,0 +1,15 @@
+﻿.fizz {
+    color: darkblue;
+}
+
+.buzz {
+    color: darkred;
+}
+
+.fizzbuzz {
+    color: orangered;
+}
+
+.fbout {
+    font-weight: bold;
+}
