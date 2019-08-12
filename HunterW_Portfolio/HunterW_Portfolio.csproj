@@ -120,10 +120,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\EmailModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +147,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\about-me-img.jpg" />
     <Content Include="Images\banner-bg2.jpg" />
+    <Content Include="Images\blogportfolioimage.jpg" />
     <Content Include="Images\contact-img.jpg" />
     <Content Include="Images\newfavicon.png" />
     <Content Include="Images\newlogo.png" />
@@ -155,6 +158,7 @@
     <Content Include="Images\post-img.jpg" />
     <Content Include="Images\project-img.jpg" />
     <Content Include="Images\project.jpg" />
+    <Content Include="Images\_DHW0003banner.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\FontAwesome.otf" />
@@ -167,6 +171,7 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <None Include="Properties\PublishProfiles\dhunterw - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\dhunterw - Web Deploy1.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\codechallenge.js" />
     <Content Include="Scripts\custom.js" />
@@ -258,7 +263,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\Email\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model HunterW_Portfolio.Models.EmailModel
+
+@{
     Layout = null;
 }
 
@@ -100,22 +102,14 @@
 
 <div id="page-content" class="container">
     <div class="row">
-        <div class="col-sm-4 contact-info text-center space-bottom">
+        <div class="col-sm-4 col-sm-offset-2 contact-info text-center space-bottom">
             <div class="contact-icon">
                 <i class="lnr lnr-sync"></i>
             </div>
             <h5>SOCIAL</h5>
-            <p class="social-contact">Facebook: <a href="https://www.facebook.com/wrathillumines"><i class="fa fa-facebook"></i></a></p>
-            <p class="social-contact">LinkedIn: <a href="#x"><i class="fa fa-linkedin"></i></a></p>
+            <p class="social-contact">Twitter: <a href="https://twitter.com/DHunterW"><i class="fa fa-twitter"></i></a></p>
+            <p class="social-contact">LinkedIn: <a href="https://www.linkedin.com/in/hunter-williams-66791644/"><i class="fa fa-linkedin"></i></a></p>
         </div><!-- / fcontact-info -->
-
-        <div class="col-sm-4 contact-info text-center space-bottom">
-            <div class="contact-icon">
-                <i class="lnr lnr-smartphone"></i>
-            </div>
-            <h5>CALL / TEXT</h5>
-            <p>Number: <a href="tel:3366893495">336 689 3495</a></p>
-        </div><!-- / contact-info -->
 
         <div class="col-sm-4 contact-info text-center space-bottom">
             <div class="contact-icon">
@@ -128,37 +122,80 @@
 
     </div><!-- / row -->
 
-    <div class="row contact-area">
-        <div class="col-sm-6 contact-text">
-            <img src="~/Images/contact-img.jpg" alt="">
-            <p>I can be reached by phone on weekdays and most weekends, as well as by text and email. Drop me a line and I will make it a priority to respond.</p>
-        </div><!-- / contact-text -->
-
-        <div class="col-sm-6 contact-form-area">
+    @*<div class="row contact-area">
+        <div class="col-sm-6 col-sm-offset-3 contact-form-area">
             <!-- contact form 1col -->
-            <div id="contact-form">
-                <form id="contactForm" data-toggle="validator">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="name" placeholder="FULL NAME" required>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="email" placeholder="EMAIL" required>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" class="form-control" rows="5" placeholder="MESSAGE" required></textarea>
-                    <div class="help-block with-errors"></div>
-                    </div>
-                    <button type="submit" id="form-submit" class="btn btn-md btn-primary-filled btn-form-submit">SEND ME A MESSAGE</button>
-                    <div id="msgSubmit" class="h3 text-center hidden"></div>
-                    <div class="clearfix"></div>  
-                </form>
-            </div><!-- / contact form 1col -->
+			<div id="contact-form">
+				@using (Html.BeginForm())
+				{
+					@Html.AntiForgeryToken()
+
+					@Html.ValidationSummary("", new { @class = "text-danger" })
+					<div class="row">
+						<div class="form-group">
+							@Html.LabelFor(m => m.FromName, new { @class = "col-md-2 control-label text-right" })
+							<div class="col-md-8">
+								@Html.TextBoxFor(m => m.FromName, new { @class = "form-control", placeholder = "Your Name Here" })<br />
+								@Html.ValidationMessageFor(m => m.FromName)
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group">
+							@Html.LabelFor(m => m.FromEmail, new { @class = "col-md-2 control-label text-right" })
+							<div class="col-md-8">
+								@Html.TextBoxFor(m => m.FromEmail, new { @class = "form-control", placeholder = "Your Email Adress" })<br />
+								@Html.ValidationMessageFor(m => m.FromEmail)
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group">
+							@Html.LabelFor(m => m.Subject, new { @class = "col-md-2 control-label text-right" })
+							<div class="col-md-8">
+								@Html.TextBoxFor(m => m.Subject, new { @class = "form-control", placeholder = "Subject of Your Message" })<br />
+								@Html.ValidationMessageFor(m => m.Subject)
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group">
+							@Html.LabelFor(m => m.Body, new { @class = "col-md-2 control-label text-right" })
+							<div class="col-md-8">
+								@Html.TextBoxFor(m => m.Body, new { @class = "form-control", placeholder = "Your Message" })<br />
+								@Html.ValidationMessageFor(m => m.Body)
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group">
+							<div class="col-md-offset-2 col-md-8">
+								<input type="submit" class="btn btn-primary" value="Send" /><br />
+							</div>
+						</div>
+					</div>
+				}
+				@*<form id="contactForm" data-toggle="validator">
+			<div class="form-group">
+				<input type="text" class="form-control" id="name" placeholder="FULL NAME" required>
+				<div class="help-block with-errors"></div>
+			</div>
+			<div class="form-group">
+				<input type="email" class="form-control" id="email" placeholder="EMAIL" required>
+				<div class="help-block with-errors"></div>
+			</div>
+			<div class="form-group">
+				<textarea id="message" class="form-control" rows="5" placeholder="MESSAGE" required></textarea>
+			<div class="help-block with-errors"></div>
+			</div>
+			<button type="submit" id="form-submit" class="btn btn-md btn-primary-filled btn-form-submit">SEND ME A MESSAGE</button>
+			<div id="msgSubmit" class="h3 text-center hidden"></div>
+			<div class="clearfix"></div>
+		</form> ASTERISK ATSYMBOL
+			</div><!-- / contact form 1col -->
         </div><!-- / col-sm-6 -->
     </div><!-- / contact-area -->
-
-</div><!-- / container -->
+</div><!-- / container -->*@
 
 <!-- / content -->
 
@@ -167,9 +204,9 @@
     <div class="container">
         <p class="footer-info">© 2019 HUNTER WILLIAMS
             <span class="social pull-right">
-                <a href="https://www.facebook.com/wrathillumines" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/DHunterW" target="_blank"><i class="fa fa-twitter"></i></a>
                 <a href="https://www.instagram.com/wrathillumines/" target="_blank"><i class="fa fa-instagram"></i></a>
-                <a href="" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/hunter-williams-66791644/" target="_blank"><i class="fa fa-linkedin"></i></a>
             </span>
         </p>
     </div><!-- / container -->

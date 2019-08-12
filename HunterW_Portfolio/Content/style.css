@@ -1785,7 +1785,10 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 /* End Navigations */
 /* Banners */
 #header-banner {
-  background-color: #ebebeb;
+  /*background-color: #ebebeb;*/
+  background: url("~/Images/_DHW0003banner.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 #header-banner.demo-1 {
