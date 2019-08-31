@@ -71,7 +71,7 @@
                         <a href="@Url.Action("About", "Home")"><span>ABOUT</span></a>
                     </li>
                     <li>
-                        <a href="@Url.Action("Portfolio", "Home")"<span>PORTFOLIO</span></a>
+                        <a href="@Url.Action("Portfolio", "Home")"><span>PORTFOLIO</span></a>
                     </li>
                     <li>
                         <a href="@Url.Action("Codingchallenges", "Home")"><span>CODING CHALLENGES</span></a>
@@ -89,7 +89,7 @@
     <div id="header-banner">
         <div class="banner-content single-page text-center">
             <div class="banner-info">
-                <h1>CONTACT INFO</h1>
+                <h1>CONTACT ME</h1>
                 <p>Hit me up.</p>
             </div><!-- / banner-info -->
         </div><!-- / banner-content -->
@@ -101,29 +101,31 @@
 <!-- content -->
 
 <div id="page-content" class="container">
-    <div class="row">
-        <div class="col-sm-4 col-sm-offset-2 contact-info text-center space-bottom">
-            <div class="contact-icon">
-                <i class="lnr lnr-sync"></i>
-            </div>
-            <h5>SOCIAL</h5>
-            <p class="social-contact">Twitter: <a href="https://twitter.com/DHunterW"><i class="fa fa-twitter"></i></a></p>
-            <p class="social-contact">LinkedIn: <a href="https://www.linkedin.com/in/hunter-williams-66791644/"><i class="fa fa-linkedin"></i></a></p>
-        </div><!-- / fcontact-info -->
-
-        <div class="col-sm-4 contact-info text-center space-bottom">
-            <div class="contact-icon">
-                <i class="lnr lnr-envelope"></i>
-            </div>
-            <h5>EMAIL</h5>
-            <p>Inquiries: <a href="mailto:hunterwilliams@northstate.net">hunterwilliams@northstate.net</a></p>
-            <p>Other: <a href="mailto:hwphotog@gmail.com">hwphotog@gmail.com</a></p>
-        </div><!-- / contact-info -->
-    </div><!-- / row -->
-
-    @*<div class="row contact-area">
-        <div class="col-sm-6 col-sm-offset-3 contact-form-area">
-            <!-- contact form 1col -->
+    <div class="row contact-area">
+		<div class="col-md-6">
+			<div class="row">
+				<div class="col-md-12 contact-info text-center space-bottom">
+					<div class="contact-icon">
+						<i class="lnr lnr-sync"></i>
+					</div>
+					<h5>SOCIAL</h5>
+					<p class="social-contact">Twitter: <a href="https://twitter.com/DHunterW"><i class="fa fa-twitter"></i></a></p>
+					<p class="social-contact">Instagram: <a href="https://www.instagram.com/wrathillumines"><i class="fa fa-instagram"></i></a></p>
+					<p class="social-contact">LinkedIn: <a href="https://www.linkedin.com/in/hunter-williams-66791644/"><i class="fa fa-linkedin"></i></a></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 contact-info text-center space-bottom">
+					<div class="contact-icon">
+						<i class="lnr lnr-envelope"></i>
+					</div>
+					<h5>EMAIL</h5>
+					<p>Inquiries: <a href="mailto:hunterwilliams@northstate.net">hunterwilliams@northstate.net</a></p>
+					<p>Other: <a href="mailto:hwphotog@gmail.com">hwphotog@gmail.com</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 contact-form-area">
 			<div id="contact-form">
 				@using (Html.BeginForm())
 				{
@@ -133,7 +135,7 @@
 					<div class="row">
 						<div class="form-group">
 							@Html.LabelFor(m => m.FromName, new { @class = "col-md-2 control-label text-right" })
-							<div class="col-md-8">
+							<div class="col-md-10">
 								@Html.TextBoxFor(m => m.FromName, new { @class = "form-control", placeholder = "Your Name Here" })<br />
 								@Html.ValidationMessageFor(m => m.FromName)
 							</div>
@@ -142,7 +144,7 @@
 					<div class="row">
 						<div class="form-group">
 							@Html.LabelFor(m => m.FromEmail, new { @class = "col-md-2 control-label text-right" })
-							<div class="col-md-8">
+							<div class="col-md-10">
 								@Html.TextBoxFor(m => m.FromEmail, new { @class = "form-control", placeholder = "Your Email Adress" })<br />
 								@Html.ValidationMessageFor(m => m.FromEmail)
 							</div>
@@ -151,7 +153,7 @@
 					<div class="row">
 						<div class="form-group">
 							@Html.LabelFor(m => m.Subject, new { @class = "col-md-2 control-label text-right" })
-							<div class="col-md-8">
+							<div class="col-md-10">
 								@Html.TextBoxFor(m => m.Subject, new { @class = "form-control", placeholder = "Subject of Your Message" })<br />
 								@Html.ValidationMessageFor(m => m.Subject)
 							</div>
@@ -160,41 +162,24 @@
 					<div class="row">
 						<div class="form-group">
 							@Html.LabelFor(m => m.Body, new { @class = "col-md-2 control-label text-right" })
-							<div class="col-md-8">
-								@Html.TextBoxFor(m => m.Body, new { @class = "form-control", placeholder = "Your Message" })<br />
+							<div class="col-md-10">
+								@Html.TextAreaFor(m => m.Body, new { @class = "form-control", placeholder = "Your Message", rows = 7 })<br />
 								@Html.ValidationMessageFor(m => m.Body)
 							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="form-group">
-							<div class="col-md-offset-2 col-md-8">
+							<div class="col-md-offset-2 col-md-10">
 								<input type="submit" class="btn btn-primary" value="Send" /><br />
 							</div>
 						</div>
 					</div>
 				}
-				@*<form id="contactForm" data-toggle="validator">
-			<div class="form-group">
-				<input type="text" class="form-control" id="name" placeholder="FULL NAME" required>
-				<div class="help-block with-errors"></div>
 			</div>
-			<div class="form-group">
-				<input type="email" class="form-control" id="email" placeholder="EMAIL" required>
-				<div class="help-block with-errors"></div>
-			</div>
-			<div class="form-group">
-				<textarea id="message" class="form-control" rows="5" placeholder="MESSAGE" required></textarea>
-			<div class="help-block with-errors"></div>
-			</div>
-			<button type="submit" id="form-submit" class="btn btn-md btn-primary-filled btn-form-submit">SEND ME A MESSAGE</button>
-			<div id="msgSubmit" class="h3 text-center hidden"></div>
-			<div class="clearfix"></div>
-		</form> ASTERISK ATSYMBOL
-			</div><!-- / contact form 1col -->
-        </div><!-- / col-sm-6 -->
-    </div><!-- / contact-area -->*@
-</div><!-- / container -->
+		</div>
+    </div>
+</div>
 
 <!-- / content -->
 

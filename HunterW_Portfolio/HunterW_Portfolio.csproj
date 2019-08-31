@@ -119,8 +119,8 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -148,7 +148,12 @@
     <Content Include="Images\about-me-img.jpg" />
     <Content Include="Images\banner-bg2.jpg" />
     <Content Include="Images\blogportfolioimage.jpg" />
-    <Content Include="Images\contact-img.jpg" />
+    <Content Include="Images\bugtracker.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\financialportal.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\newfavicon.png" />
     <Content Include="Images\newlogo.png" />
     <Content Include="Images\newlogo2.png" />
@@ -156,9 +161,6 @@
     <Content Include="Images\newlogo4.png" />
     <Content Include="Images\m-project.jpg" />
     <Content Include="Images\post-img.jpg" />
-    <Content Include="Images\project-img.jpg" />
-    <Content Include="Images\project.jpg" />
-    <Content Include="Images\_DHW0003banner.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\FontAwesome.otf" />
@@ -237,14 +239,11 @@
     <Content Include="Scripts\SyntaxHighlighter\styles\shThemeMidnight.css" />
     <Content Include="Scripts\SyntaxHighlighter\styles\shThemeRDark.css" />
     <Content Include="Views\Home\index.cshtml" />
-    <Content Include="Views\Home\notfound.cshtml" />
     <Content Include="Views\Home\about.cshtml" />
     <Content Include="Scripts\preloader.js" />
     <Content Include="Scripts\validator.min.js" />
-    <Content Include="Views\Home\COMPONENT_REFERENCE.html" />
     <Content Include="Views\Home\contact.cshtml" />
     <Content Include="Views\Home\portfolio.cshtml" />
-    <Content Include="Views\Home\singleproject.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -256,14 +255,12 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Old\old_About.cshtml" />
-    <Content Include="Views\Old\old_Contact.cshtml" />
-    <Content Include="Views\Old\old_Index.cshtml" />
     <Content Include="Views\Home\codingchallenges.cshtml" />
+    <Content Include="private.config" />
+    <Content Include="Views\Home\Sent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Email\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

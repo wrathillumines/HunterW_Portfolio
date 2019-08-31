@@ -1,15 +1,19 @@
 ﻿.fizz {
     color: darkblue;
+    margin-left: 0px;
 }
 
 .buzz {
     color: darkred;
+    margin-left: 0px;
 }
 
 .fizzbuzz {
     color: orangered;
+    margin-left: 0px;
 }
 
-.fbout {
+.fbout span {
     font-weight: bold;
+    margin-left: 0px !important;
 }

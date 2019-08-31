@@ -2121,10 +2121,10 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
   text-align: left;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: opacity 0.3s, ease-in-out 0.3s;
-  -moz-transition: opacity 0.3s, ease-in-out 0.3s;
-  -o-transition: opacity 0.3s, ease-in-out 0.3s;
-  transition: opacity 0.3s, ease-in-out 0.3s;
+  -webkit-transition: opacity 0.7s, ease-in-out 0.7s;
+  -moz-transition: opacity 0.7s, ease-in-out 0.7s;
+  -o-transition: opacity 0.7s, ease-in-out 0.7s;
+  transition: opacity 0.7s, ease-in-out 0.7s;
 }
 
 .project:hover .project-details {
@@ -2377,7 +2377,16 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 }
 
 .project-info span {
-  margin-left: 15px;
+    margin-left: 15px;
+}
+
+.fbout {
+    margin-left: 0px !important;
+    font-weight: bold;
+}
+
+span.fizzbuzz {
+    margin-left: 0px !important;
 }
 
 .info-buttons {
@@ -2923,7 +2932,7 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
   letter-spacing: 0.05em;
   border: 1px solid #ebebeb;
   border-radius: 0;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   padding: 10px 20px;
   min-height: 50px;
   -webkit-box-shadow: none;
@@ -2940,7 +2949,7 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
   letter-spacing: 0.05em;
   border: 1px solid #ebebeb;
   border-radius: 0;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   padding: 10px 20px;
   min-height: 50px;
   -webkit-box-shadow: none;
@@ -2954,7 +2963,7 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
   max-width: 100%;
   min-height: 130px !important;
   max-height: 211px;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   padding: 20px !important;
 }
 
