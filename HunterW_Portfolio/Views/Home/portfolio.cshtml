@@ -62,23 +62,26 @@
                 <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img src="~/Images/newlogo.png" alt="logo"></a>
             </div><!-- / navbar-header -->
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="@Url.Action("Index", "Home")"><span>HOME</span></a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("About", "Home")"><span>ABOUT</span></a>
-                    </li>
-                    <li class="active">
-                        <a href="@Url.Action("Portfolio", "Home")"><span>PORTFOLIO</span></a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("Codingchallenges", "Home")"><span>CODING CHALLENGES</span></a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("Contact", "Home")"><span>CONTACT</span></a>
-                    </li>
-                </ul>
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="@Url.Action("Index", "Home")"><span>HOME</span></a>
+					</li>
+					<li>
+						<a href="@Url.Action("About", "Home")"><span>ABOUT</span></a>
+					</li>
+					<li class="active">
+						<a href="@Url.Action("Portfolio", "Home")"><span>PORTFOLIO</span></a>
+					</li>
+					<li>
+						<a href="@Url.Action("Codingchallenges", "Home")"><span>CODING CHALLENGES</span></a>
+					</li>
+					<li>
+						<a href="@Url.Action("Resume", "Home")"><span>RESUME</span></a>
+					</li>
+					<li>
+						<a href="@Url.Action("Contact", "Home")"><span>CONTACT</span></a>
+					</li>
+				</ul>
             </div><!--/ nav-collapse -->
         </div><!-- / container -->
     </nav>
@@ -114,17 +117,17 @@
             <!-- blog -->
             <li class="col-md-4 project" data-groups='["illustration"]'>
                 <div class="img-bg-color primary">
-                    <a href="https://dhwblog.azurewebsites.net" target="_blank" class="project-link"></a>
+                    <a href="https://hwrailfanning.net" target="_blank" class="project-link"></a>
                     <!-- / project-link -->
-                    <img src="~/Images/blogportfolioimage.jpg" alt="">
+                    <img src="~/Images/trainblog.jpg" alt="">
                     <!-- / project-image -->
 
                     <!-- project-hover-tools -->
                     <div class="project-hover-tools">
-                        <a href="https://dhwblog.azurewebsites.net" target="_blank" class="view-btn">
+                        <a href="https://hwrailfanning.net" target="_blank" class="view-btn">
                             <i class="lnr lnr-eye"></i>
                         </a>
-                        <a href="~/Images/blogportfolioimage.jpg" class="open-gallery">
+                        <a href="~/Images/trainblog.jpg" class="open-gallery">
                             <i class="lnr lnr-frame-expand"></i>
                         </a>
                     </div><!-- / project-hover-tools -->
@@ -143,13 +146,13 @@
             <!-- bug tracker -->
             <li class="col-md-4 project" data-groups='["branding"]'>
 				<div class="img-bg-color primary">
-					<a href="#" class="project-link"></a>
+					<a href="https://hwerrortracker.azurewebsites.net" class="project-link"></a>
 					<!-- / project-link -->
 					<img src="~/Images/bugtracker.jpg" alt="">
 					<!-- / project-image -->
 					<!-- project-hover-tools -->
 					<div class="project-hover-tools">
-						<a href="#" class="view-btn">
+						<a href="https://hwerrortracker.azurewebsites.net" class="view-btn">
 							<i class="lnr lnr-eye"></i>
 						</a>
 						<a href="~/Images/bugtracker.jpg" class="open-gallery">
@@ -159,7 +162,7 @@
 					<!-- project-details -->
 					<div class="project-details">
 						<h5 class="project-title">BUG TRACKER</h5>
-						<p class="skill">COMING SOON</p>
+						<h6 class="project-title">Languages used in the bug tracker include C#, SQL, JavaScript, Ajax, and a good bit of custom CSS.</h6>
 					</div><!-- / project-details -->
 				</div><!-- / img-bg-color -->
             </li>
@@ -168,14 +171,14 @@
             <!-- financial portal -->
             <li class="col-md-4 project" data-groups='["logo-design"]'>
                 <div class="img-bg-color primary">
-                    <a href="#" class="project-link"></a>
+                    <a href="https://hwbudgetassistant.azurewebsites.net" class="project-link"></a>
                     <!-- / project-link -->
                     <img src="~/Images/financialportal.jpg" alt="">
                     <!-- / project-image -->
 
                     <!-- project-hover-tools -->
                     <div class="project-hover-tools">
-                        <a href="#" class="view-btn">
+                        <a href="https://hwbudgetassistant.azurewebsites.net" class="view-btn">
                             <i class="lnr lnr-eye"></i>
                         </a>
                         <a href="~/Images/financialportal.jpg" class="open-gallery">
@@ -186,11 +189,38 @@
                     <!-- project-details -->
                     <div class="project-details">
                         <h5 class="project-title">FINANCIAL PORTAL</h5>
-                        <p class="skill">COMING SOON</p>
+						<h6 class="project-title">Used in the financial portal are<br />languages including C#, SQL,<br />JavaScript, Ajax, and a lot of CSS.</h6>
                     </div><!-- / project-details -->
                 </div><!-- / img-bg-color -->
             </li>
             <!-- / financial portal -->
+
+		    <!-- api -->
+            <li class="col-md-4 col-md-offset-4 project" data-groups='["logo-design"]'>
+                <div class="img-bg-color primary">
+                    <a href="https://hwbudgetapi.azurewebsites.net" class="project-link"></a>
+                    <!-- / project-link -->
+                    <img src="~/Images/api.jpg" alt="">
+                    <!-- / project-image -->
+
+                    <!-- project-hover-tools -->
+                    <div class="project-hover-tools">
+                        <a href="https://hwbudgetapi.azurewebsites.net" class="view-btn">
+                            <i class="lnr lnr-eye"></i>
+                        </a>
+                        <a href="~/Images/api.jpg" class="open-gallery">
+                            <i class="lnr lnr-frame-expand"></i>
+                        </a>
+                    </div><!-- / project-hover-tools -->
+
+                    <!-- project-details -->
+                    <div class="project-details">
+                        <h5 class="project-title">FINANCIAL API</h5>
+						<h6 class="project-title">API based on the financial portal database using Swagger and Swashbuckle.</h6>
+                    </div><!-- / project-details -->
+                </div><!-- / img-bg-color -->
+            </li>
+            <!-- / api -->
 
             <!-- project --
             <li class="col-xs-6 col-md-4 project" data-groups='["illustration", "logo-design", "branding"]'>

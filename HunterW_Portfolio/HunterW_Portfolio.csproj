@@ -146,11 +146,9 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\about-me-img.jpg" />
+    <Content Include="Images\api.jpg" />
     <Content Include="Images\banner-bg2.jpg" />
-    <Content Include="Images\blogportfolioimage.jpg" />
-    <Content Include="Images\bugtracker.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Images\bugtracker.jpg" />
     <Content Include="Images\financialportal.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -161,6 +159,7 @@
     <Content Include="Images\newlogo4.png" />
     <Content Include="Images\m-project.jpg" />
     <Content Include="Images\post-img.jpg" />
+    <Content Include="Images\trainblog.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\FontAwesome.otf" />
@@ -258,6 +257,7 @@
     <Content Include="Views\Home\codingchallenges.cshtml" />
     <Content Include="private.config" />
     <Content Include="Views\Home\Sent.cshtml" />
+    <Content Include="Views\Home\resume.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

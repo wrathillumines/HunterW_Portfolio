@@ -80,5 +80,10 @@ namespace HunterW_Portfolio.Controllers
         {
             return View();
         }
+
+        public ActionResult resume()
+        {
+            return View();
+        }
     }
 }

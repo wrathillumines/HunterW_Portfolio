@@ -349,3 +349,4 @@ healthchecksdb
 MigrationBackup/
 *.config
 *.config
+HunterW_Portfolio/Web.config
